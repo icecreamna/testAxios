@@ -8,6 +8,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 const RecipeDetailScreen = ({ route }) => {
     const { recipe } = route.params
     const [isFavorite, setIsFavorite] = useState(false)
+    
 
     const ingredientsdetail = (recipe) => {
         const ingredients = [];

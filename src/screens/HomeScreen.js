@@ -3,11 +3,13 @@ import { View, Text, StyleSheet, TextInput, FlatList, Image } from "react-native
 import axios from "axios";
 import SearchBox from "../components/SearchBox";
 import RecipeCard from "../components/RecipeCard";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 
 const HomeScreen = ({ navigation }) => {
     const [search, setSearch] = useState('')
     const [recipes, setRecipes] = useState([])
+
 
     useEffect(() => {
         fetchRecipes();

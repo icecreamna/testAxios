@@ -11,13 +11,13 @@ const FavoritesScreen = () => {
 
   const loadFavorite = async () => {
     try {
-      const storedFavorites = await AsyncStorage.getItem('favorites')
-      const favorites = storedFavorites ? JSON.parse(storedFavorites) : []
-      setFavorite(favorites)
+        const storedFavorites = await AsyncStorage.getItem('favorites')
+        const favorites = storedFavorites ? JSON.parse(storedFavorites) : []
+        setFavorite(favorites)
     } catch (error) {
-      console.log('Can not load item', error)
+        console.error('Error loading Favorite', error)
     }
-  }
+}
 
   useEffect(() => {
     loadFavorite();
